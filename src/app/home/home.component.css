@@ -1,0 +1,338 @@
+body{
+  background-color: #638889;
+  margin: auto;
+  margin-top: -9px;
+  margin-left: -10px;
+  margin-right: -8px;
+  
+}
+
+
+  .profile {
+    display: flex;
+    max-width: 480px;
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: absolute;
+    padding-left: 35px;
+    
+  }
+
+  .profile-header {
+    display: flex;
+    gap: 8px;
+    font-weight: 400;
+  }
+
+  .profile-image {
+    margin-top: 30px;
+    height: 60px;
+    width: 60px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+  }
+
+  .profile-name {
+    margin-top: 30px;
+    color: #fff;
+    
+    font-size: 15px;
+    
+  }
+
+  
+.button {
+  margin-left: 60px;
+  margin-top: 9;
+}
+
+  .Add{
+    margin-top: -10px;
+    border-radius:100px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    margin-top: 49px;
+    color: #181818;
+    text-align: center;
+    letter-spacing: 1.6px;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+  
+  }
+
+  .dressing {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 500px;
+    width: 400px;
+    overflow: hidden;
+     
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    padding-left: 1200px; 
+
+   
+  }
+  .dressing_background{
+    width: 640px;
+    height: 300px;
+    border-radius: 100px;
+     margin-top: 30px;
+  }
+  .section_title {
+    position: absolute;
+    margin-top: 250px;
+    
+    font-size: 28px;
+    color: #fffbfb;
+    padding-right: 200px;
+  }
+  .gg-arrow-top-right-o {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 40px; /* Modifiez la largeur */
+    height: 40px; /* Modifiez la hauteur */
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 20px;
+    color: black; /* Modifiez la couleur */
+    margin-top: -60px;
+  left: -20px;
+  }
+  
+  .gg-arrow-top-right-o::after,
+  .gg-arrow-top-right-o::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    right: 8px; /* Ajustez la position horizontale */
+  }
+  
+  .gg-arrow-top-right-o::after {
+    width: 20px; /* Modifiez la largeur */
+    height: 4px; /* Modifiez la hauteur */
+    background: currentColor;
+    transform: rotate(-45deg);
+    bottom: 16px; /* Ajustez la position verticale */
+  }
+  
+  .gg-arrow-top-right-o::before {
+    width: 12px; /* Modifiez la largeur */
+    height: 12px; /* Modifiez la hauteur */
+    top: 8px; /* Ajustez la position verticale */
+    border-top: 2px solid;
+    border-right: 2px solid;
+  }
+  
+  
+  .arrow-link {
+    width: 60px; 
+    height: 60px; 
+    z-index: 2; 
+    cursor: pointer; 
+  }
+  
+ 
+  
+  
+  .meteo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 700px;
+    width: 100px;
+    overflow: hidden;
+    background-size: 50px;
+    background-position: center;
+    cursor: pointer;
+    padding-left: 850px; 
+
+   
+  }
+  .meteo_background{
+    width: 300px;
+    height: 200px;
+    border-radius: 50px;
+     margin-top: 350px;
+  }
+    
+  .gg-arrow-top-right-o3 {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 40px; /* Modifiez la largeur */
+    height: 40px; /* Modifiez la hauteur */
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 20px;
+    color: black; /* Modifiez la couleur */
+    margin-top: -60px;
+     left: -3px;
+  }
+  
+  .gg-arrow-top-right-o3::after,
+  .gg-arrow-top-right-o3::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    right: 8px; /* Ajustez la position horizontale */
+  }
+  
+  .gg-arrow-top-right-o3::after {
+    width: 20px; /* Modifiez la largeur */
+    height: 4px; /* Modifiez la hauteur */
+    background: currentColor;
+    transform: rotate(-45deg);
+    bottom: 16px; /* Ajustez la position verticale */
+  }
+  
+  .gg-arrow-top-right-o3::before {
+    width: 12px; /* Modifiez la largeur */
+    height: 12px; /* Modifiez la hauteur */
+    top: 8px; /* Ajustez la position verticale */
+    border-top: 2px solid;
+    border-right: 2px solid;
+  }
+  
+  
+  .calendrier {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 700px;
+    width: 100px;
+    overflow: hidden;
+    background-size: 50px;
+    background-position: center;
+    cursor: pointer;
+    padding-left: 1200px; 
+
+   
+  }
+  .calendrier_background{
+    width: 300px;
+    height: 200px;
+    border-radius: 50px;
+     margin-top: 350px;
+  }
+    
+  .gg-arrow-top-right-o4 {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 40px; /* Modifiez la largeur */
+    height: 40px; /* Modifiez la hauteur */
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 20px;
+    color: black; /* Modifiez la couleur */
+    margin-top: -60px;
+     left: -15px;
+  }
+  
+  .gg-arrow-top-right-o4::after,
+  .gg-arrow-top-right-o4::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    right: 8px; 
+  }
+  
+  .gg-arrow-top-right-o4::after {
+    width: 20px; 
+    height: 4px; 
+    background: currentColor;
+    transform: rotate(-45deg);
+    bottom: 16px; 
+  }
+  
+  .gg-arrow-top-right-o4::before {
+    width: 12px; 
+    height: 12px; 
+    top: 8px; 
+    border-top: 2px solid;
+    border-right: 2px solid;
+  }
+  
+  /*icon*/
+ 
+  .profile-actions {
+    position: fixed;
+    display: block;
+    align-items: center;
+    top: 30px;
+    left: 1300px;
+  }
+  .profile-actions ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+  }
+  
+  .profile-actions ul li {
+    margin-bottom: 14px; 
+  }
+  
+  /* Style général des icônes */
+  .fa-icon {
+    
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .faUserEdit {
+    font-size: 60px;
+    
+    
+  }
+  .fa-lg {
+    font-size: 1.6em; 
+    color: #ffffff;
+  }
+  
+  .faTrash {
+    font-size: 60px;
+
+  }
+   /*popup message*/
+   .modal-dialog{
+    margin-top: 90px;
+  
+    
+   }
+   .modal-content{
+    border-radius: 25px;
+    border-color: #4682A9;
+    background-color: #fff;
+    height: 160px;
+    width: 470px;
+
+   }
+   .modal-title{
+    color: #000;
+   }
+   .btn {
+    color: rgb(0, 0, 0);
+
+   }
+   
+  

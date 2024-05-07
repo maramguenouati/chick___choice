@@ -1,0 +1,78 @@
+<body>
+  
+  <section class="profile">
+    <header class="profile-header">
+      <img src="assets/img.jpg" alt="Profile picture of Tony B." class="profile-image" />
+      <div class="profile-info">
+        <h1 class="profile-name">Guenouati Maram</h1>
+      </div>
+    </header>
+    
+  </section>
+  
+  
+
+  
+
+
+
+  <section class="dressing">
+    <img src="assets/img1.jpg" alt="" class="dressing_background" loading="lazy" />
+    <h2 class="section_title">My Dressing </h2>
+    <a href="#" class="arrow-link">
+      <span class="gg-arrow-top-right-o"></span>
+    </a>
+  </section>
+
+  <section class="Meteo">
+    <img src="assets/img3.png" alt="" class="Meteo_background" loading="lazy" />
+    <a routerLink="/meteo" class="arrow-link" >
+      <span class="gg-arrow-top-right-o3"></span>
+    </a>
+  </section>
+  <section class="calendrier">
+    <img src="assets/img5.jpg" alt="" class="calendrier_background" loading="lazy" />
+    <a routerLink="/calendar" class="arrow-link">
+      <span class="gg-arrow-top-right-o4"></span>
+    </a>
+  </section>
+ 
+   <!-- Icons for delete and edit profile -->
+   <div class="profile-actions">
+    <ul>
+      <li>
+        <span>
+          <fa-icon class="fa-lg" [icon]="faUserEdit"></fa-icon>
+        </span>
+      </li>
+      <li>
+        <span>
+          <fa-icon class="fa-lg" [icon]="faTrash" (click)="deleteCompte()"></fa-icon>
+        </span>
+      </li>
+    </ul>
+  </div>
+  
+
+<div class="popup">
+<div class="popup-message" *ngIf="showDeleteMessage">Le compte a été supprimé avec succès!</div>
+
+<div class="modal fade" id="deleteModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="model-header">
+        <h5 class="modal-title">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Confirmation de suppression</h5>
+      </div>
+      <div class="modal-body">
+        Êtes-vous sûr de vouloir supprimer ce compte ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary " data-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-danger" (click)="confirmDelete()" >Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<app-chatbot></app-chatbot>
+</body>

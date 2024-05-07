@@ -1,0 +1,371 @@
+.right-meteo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/*navbar*/
+.right-meteo-navbar{
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-meteo-databox{
+    flex: 12;
+    
+}
+/*navbar elemnet*/
+.navbar-elemnt{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+button {
+    font-size: 18px;
+    color: #212121;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  button:focus,
+  button:hover {
+    color: #212121;
+  }
+  
+  button:focus:after,
+  button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #212121;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+.today{
+    margin-right:15px ;
+}
+/*navbar temperature */
+.navbar-temperature{
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+    justify-content: center;
+    align-items:center ;
+}
+/*C / F*/
+.celsius {
+
+border-radius: 500px;
+padding-left: 7px;
+padding-right: 7px;
+padding-top: 5px;
+padding-bottom: 5px;
+color: #212121;
+background-color: #fff;
+font-size: small;
+}
+.fahrenheit{
+  border-radius: 500px;
+padding-left: 7px;
+padding-right: 7px;
+padding-top: 5px;
+padding-bottom: 5px;
+color: #212121;
+background-color: #fff;
+font-size: small;
+margin-left: 10px;
+margin-right: 10px;
+}
+.celsius:hover{
+color: #fff;
+background-color: #212121;
+cursor: pointer;
+}
+.fahrenheit:hover{
+  color: #fff;
+background-color: #212121;
+cursor: pointer;
+}
+.celsius-active{
+  color: #fff;
+background-color: #212121;
+}
+.fahrenheit-active{
+  color: #fff;
+background-color: #212121;
+}
+/*css img */
+.profilimg img{
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+margin-left: 10px;
+margin-right: 10px;
+}
+/*----------------------------------------------------------*/
+/*databox*/
+.right-meteo-databox{
+  flex: 12;
+  display: flex;
+  flex-direction: column;
+   margin: 30px;
+   margin-top: 20px;
+}
+.right-week-cadre{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.cadre{
+  width: 85px;
+  height: 100px;
+  background-color:#fafafa;
+  border-radius: 10px;
+  margin-left: 5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size:medium;
+  font-weight: 600;
+
+}
+.cadre-day{
+  
+  margin: 36px;
+  margin-top: 3px;
+}
+
+.cadre-img img{
+  width: 50px;
+  height: 50px;
+  margin-top: -32px;
+}
+.cadre-temp-value{
+  margin: 5px;
+ 
+}
+
+
+.right-today-cadre{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+/* 2eme partie */
+.right-todays-highlight{
+margin-top: 49px;
+flex: 3;
+display: flex;
+flex-direction: column;
+
+}
+.right-todays-title{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex: 2;
+  font-size: 25px;
+  font-weight: bold;
+  
+}
+.right-todays-caders{
+  flex: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.right-todays-cader{
+  display: flex;
+  flex-direction: column;
+  background-color:#fff;
+  border-radius: 15px;
+  width: 180px;
+  height: 105px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+}
+.right-todays-cader-titel{
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #c9c9c9;
+  
+}
+
+.gauge{
+  margin-top: -10px;
+  flex: 2;
+  width: 60%;
+  max-width: 180px;
+  font-size: 32px;
+  color: #212121;
+  font-weight: 500;
+  margin-bottom: -20px;
+}
+.gauge-body{
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background: #fafafa;
+  position: relative;
+  border-top-left-radius: 100% 200%;
+  border-top-right-radius: 100% 200%;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.gauge-fill{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: inherit;
+  height: 100%;
+  background: #ffbf5e;
+  transform-origin: center top;
+  transform: rotate(0.25turn);
+  transition: transform 0.2s ease-out;
+}
+.gauge-cover{
+  width: 75%;
+  height: 150%;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  /*text*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25%;
+  box-sizing: border-box;
+  color: #fafafa;
+}
+.right-todays-cader-value{
+  flex: 1;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-size: xx-large;
+  font-weight: 500;
+  z-index: 1;
+ 
+}
+.wind-status-value{
+  flex: 2;
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+}
+.unit{
+  font-size: 24px;
+}
+.wind-logo{
+  flex: 1;
+  align-self:self-start;
+  margin-left: 30px;
+ 
+
+}
+.wind-logo img{
+  width: 30px;
+  height: 30px;
+  margin-top: -10px;
+}
+
+.humidity-summary{
+  font-size: small;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.sunrise-sunset-value{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+ 
+}
+.sunrise{
+  margin-top: 3px;
+flex: 1;
+display: flex;
+flex-direction: row;
+
+}
+.sunrise-img{
+ flex: 1;
+margin-bottom: 10px;
+margin-right: 10px;
+
+}
+.sunrise-img img {
+  width: 30px;
+  height: 30px;
+ 
+}
+.sunrise-time{
+  flex: 4;
+  font-weight: 600;
+  font-size: 19px;
+
+
+}
+.sunset{
+  flex: 1;
+  display: flex;
+flex-direction: row;
+
+}
+.sunset-img{
+  flex: 1;
+  margin-bottom: 10px;
+  margin-right: 10px;
+
+}
+.sunset-img img{
+  width: 30px;
+  height: 30px;
+}
+.sunset-time{
+  flex: 4;
+  font-weight: 600;
+  font-size: 19px;
+
+}
+.wind-status-value{
+  margin-top:-12px;
+
+}

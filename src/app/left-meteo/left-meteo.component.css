@@ -1,0 +1,153 @@
+.left-meteo{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.left-navbar{
+flex: 2;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: centers;
+margin-top: 25px;
+
+
+}
+.search-icon{
+    flex: 2;
+    color: #F7F5F9;
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 6px;
+
+
+}
+.search-input{
+flex: 4;
+
+}
+
+.search-input input {
+    border-radius: 5px;
+    border: none;
+    padding: 4px;
+    font-size: 15px;
+    color: #000;
+}
+.localisation{
+flex: 2;
+color: #F7F5F9;
+text-align: center;
+margin-top: 6px;
+
+}
+.localisation fa-icon{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #181818;
+    border-radius: 500px;
+}
+/*------------------------------------------------*/
+/* css data left temps , date .... */
+
+.left-databox{
+flex: 12;
+display: flex;
+margin-left: 30px;
+margin-right: 30px;
+flex-direction: column;
+}
+/*temperature date img temps*/
+.left-temps-date{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: #F7F5F9;
+
+}
+.left-temps-img{
+    flex: 2;
+}
+
+.left-temps-img img{
+    width: 180px;
+    height:180px ;
+    margin-top: -40px;
+  
+}
+.left-temps-value{
+    flex: 1;
+    font-size: 82px;
+    font-weight: normal;
+    margin-top: -25px;
+}
+.left-temps-value sup{
+    position: relative;
+    top: 8px;
+    font-size: 36px;
+   
+}
+.left-date-time{
+    flex: 1;
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: -14px;
+  
+}
+.time{
+    color: #4e4d4d;
+}
+.dividing-line{
+    height: 1px;
+    width: 100%;
+    background-color: #F7F5F9;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/*temperature detail : localisation ,img ...*/
+.left-details{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: #F7F5F9;
+}
+.left-temps{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+
+}
+.left-temp-phrase-img{
+    margin-right: 8px;
+}
+.left-rain-stats{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+.left-rain-stats-img{
+    margin-right: 8px;
+}
+.left-localisation-details{
+    flex: 3;
+    text-align: center;
+    color: #181818;
+    
+    
+}
+.left-localisation-img img{
+    width: 210px;
+    height: 80px;
+    border-radius: 20px;
+
+
+}
+.left-localisation-name{
+    margin-top: -50px;
+    font-size: large;
+    font-weight: bold;
+}

@@ -1,0 +1,63 @@
+<form [formGroup]="registerForm" >
+  <div class="wrapper">  
+    <div class="sign_in">
+      <div class="sign_form_wrapper">
+        <div class="titre">&nbsp; &nbsp; &nbsp; welcome back</div>
+        
+        <div class="input_box">
+          <span class="icon"><label for="emailInput" class="input"> <fa-icon class="fa-xs" [icon]="faEnvelope"></fa-icon> &nbsp; Email Address</label></span>
+          <input type="email" formControlName="email" required placeholder="Email" class="form-control">
+          <label  for="Email"></label>
+          <small class="text-danger" *ngIf="email?.errors?.['required'] && email?.touched ">
+            <i >Please enter your Email</i>
+          </small>
+          
+          <small class="text-danger" *ngIf="email?.errors?.['email'] && email?.touched">
+            <i >Please enter a valid Email</i>
+          </small>
+        </div>
+        <div class="popup">                        
+          <div class="modal fade" id="invalidEmailModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title"><fa-icon class="fa-lg" [icon]="faMeh"></fa-icon> Invalid Email</h5>
+                </div>
+                <div class="modal-body">
+                  <p>Please enter a valid email address.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="input_box">
+          <span class="icon"><label for="passwordInput" class="input"><fa-icon class="fa-xs" [icon]="faKey"></fa-icon>  &nbsp; Password</label> </span>
+          <input type="password" formControlName="password" placeholder="Password"  class="form-control"  required>
+          <label for="Password"></label>
+          <small class="text-danger" *ngIf="password?.errors?.['required'] && password?.touched">
+            <i>Please enter your password</i>
+          </small>
+        </div>
+        
+        <button type="submit" [disabled]="registerForm.valid" class="btn w-100 main_btn" (click)="sign_in()">Submit</button>
+
+        <div class="popup">                        
+          <div class="modal fade" id="signinModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="model-header">
+                  <h5 class="modal-title"><fa-icon class="fa-lg" [icon]="faMeh"></fa-icon>Please replace all the formula champs! ...</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</form>

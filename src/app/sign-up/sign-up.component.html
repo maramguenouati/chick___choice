@@ -1,0 +1,145 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+<div class="wrapper">
+    <div class="row login_container">
+        <div class="col-lg-6 col-md-6 col-sm-12 login_container__left">
+            <div class="login_form_wrapper">
+                <h4 class="sign">Sign Up</h4>
+                <div class="titre">  <sup class="titreP1"> Welcome to Chick choice ,  </sup>   <br> &nbsp; &nbsp; Create your account</div>
+                <form [formGroup]="registerForm" >
+                    
+                      <div class="form-group custom_form_group">
+                        <label for="nameInput" class="input">Name</label>
+                        <input type="text" formControlName="name" autocomplete="false" class="form-control" id="nameInput" placeholder="Enter your Name">
+                        <small class="text-danger" *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+                            <i *ngIf="name?.errors?.['required']">
+                                Please enter your name
+                            </i>
+                        </small>
+                      </div>
+                      <div class="form-group custom_form_group">
+                        <label for="lastnameInput" class="input">Last Name</label>
+                        <input type="text" formControlName="lastname" autocomplete="false" class="form-control" id="lastnameInput" placeholder="Enter your Last Name">
+                        <small class="text-danger" *ngIf="lastname?.invalid && (lastname?.dirty || lastname?.touched)">
+                            <i *ngIf="lastname?.errors?.['required']">
+                                Please enter your last name
+                            </i>
+                        </small>
+                    </div>
+                    
+                    
+                     <div class="form-group custom_form_group">
+                      <label for="emailInput" class="input">Email Address</label>
+                      <input type="email" formControlName="email" autocomplete="false" class="form-control" id="emailInput" placeholder="Enter your email">
+                      <small class="text-success" *ngIf="email?.valid && (email?.dirty || email?.touched)">
+                          <i class="material-icons">
+                              done
+                          </i>
+                          Email syntax is correct
+                      </small>
+                      <small class="text-danger" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                          <i *ngIf="email?.errors?.['required']">
+                            Please enter your Email
+                          </i>
+                          <i *ngIf="email?.errors?.['email']">
+                              Please enter a valid email address
+                          </i>
+                      </small>
+                  </div>
+                  
+                    <div class="form-group custom_form_group">
+                        <label for="passwordInput" class="input">Password</label>
+                        <input type="password" formControlName="password" autocomplete="false" class="form-control" id="passwordInput" placeholder="Enter your password">
+                        <div class="form-group" *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+                            <label class="col_invalid_msg" [ngClass]="password?.hasError('required') || password?.hasError('minlength')  ? 'text-danger' : 'text-success'">
+
+                                <i class="material-icons">
+                                    {{ password?.hasError('required') || password?.hasError('minlength') ? 'cancel' : 'check_circle' }}
+                                </i> must be at least 8 characters!
+                            </label>
+                            <label class="col_invalid_msg" [ngClass]="password?.hasError('required') || password?.hasError('hasNumber')  ? 'text-danger' : 'text-success'">
+                                <i class="material-icons">
+                                    {{ password?.hasError('required') || password?.hasError('hasNumber') ? 'cancel' : 'check_circle' }}
+                                </i>
+                                must contain at least 1 number!
+                            </label>
+                            <label class="col_invalid_msg" [ngClass]="password?.hasError('required') || password?.hasError('hasCapitalCase')  ? 'text-danger' : 'text-success'">
+                                <i class="material-icons">
+                                    {{ password?.hasError('required') || password?.hasError('hasCapitalCase') ? 'cancel' : 'check_circle' }}
+                                </i>
+                                must contain at least 1 in Capital Case!
+                            </label>
+                            <label class="col_invalid_msg" [ngClass]="password?.hasError('required') || password?.hasError('hasSmallCase') ? 'text-danger' : 'text-success'">
+                                <i class="material-icons">
+                                    {{ password?.hasError('required') || password?.hasError('hasSmallCase') ? 'cancel' : 'check_circle' }}
+                                </i>
+                                must contain at least 1 Letter in Small Case!
+                            </label>
+                            <label class="col_invalid_msg" [ngClass]="password?.hasError('required') || password?.hasError('hasSpecialCharacters') ? 'text-danger' : 'text-success'">
+                                <i class="material-icons">
+                                    {{ password?.hasError('required') || password?.hasError('hasSpecialCharacters') ? 'cancel' : 'check_circle' }}
+                                </i>must contain at least 1 Special Character!
+                            </label>
+                        </div>
+
+
+                    </div>
+                    <div class="form-group custom_form_group">
+                      <div class="form-group custom_form_group">
+                        <label for="confirmPasswordInput" class="input">Confirm Password</label>
+                        <input type="password" class="form-control" formControlName="confirm_password" id="confirmPasswordInput" placeholder="Confirm your password" >
+                        <small class="text-danger" *ngIf="confirm_password?.invalid && (confirm_password?.dirty || confirm_password?.touched)">
+                            <i *ngIf="confirm_password?.errors?.['required']">
+                                Please Confirm password 
+                            </i>
+                            <i *ngIf="confirm_password?.hasError('not_matching') && !registerForm.controls['confirm_password'].errors?.['required']">
+                                The password doesn't match!
+                            </i>
+                        </small>
+                        <i class="text-success" *ngIf="registerForm.controls['password'].value === registerForm.controls['confirm_password'].value && registerForm.controls['confirm_password'].touched && !confirm_password?.hasError('not_matching') && !confirm_password?.errors?.['required']">
+                            Password confirmed successfully
+                        </i>
+                    </div>
+                    
+                  </div>
+                  
+                    
+                    <div class="form-group custom_form_group" class="input">
+                        <div class="titrchek">
+                            Your gender:
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" formControlName="gender" id="maleRadio" value="male">
+                            <label class="form-check-label" for="maleRadio">Male</label>
+                        </div>
+                        &nbsp; 
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" formControlName="gender" id="femaleRadio" value="female">
+                            <label class="form-check-label" for="femaleRadio">Female</label>
+                        </div>
+                    </div>
+                    
+            
+
+                    <div class="form-group custom_form_group">
+                    </div>
+                    <button type="submit" [disabled]="!registerForm.valid" class="btn w-100 main_btn"  (click)="sign_up()">Submit</button>
+
+                    <div class="popup">                        
+                        <div class="modal fade" id="signModal">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="model-header">
+                                <h5 class="modal-title"><fa-icon class="fa-lg" [icon]="faMeh"></fa-icon>Please replace all the formula champs! ...</h5>
+                              </div>
+                              
+                            </div></div></div></div></form>
+               
+                <p class="redirect w-100 text-center regular_text mt-2 ">
+                    <span class="regular_text_two">Already have an account ? </span>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+</div>

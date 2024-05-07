@@ -1,0 +1,26 @@
+
+  <body>
+    <button class="chatbot-toggler" (click)="openChatbot()">
+      <span class="material-icons-rounded"><fa-icon class="fa-xs" [icon]="faMessage"></fa-icon></span>
+      <span class="close-btn material-icons-outlined" (click)="closeChatbot()"><fa-icon class="fa-xs" [icon]="faClose"></fa-icon></span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h2>Chatbot</h2>
+        <button (click)="closeChatbot()">
+        <span class="close-btn material-icons-outlined"><fa-icon class="fa-xs" [icon]="faClose"></fa-icon></span>
+      </button>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-icons-outlined"><fa-icon class="fa-xs" [icon]="faRobot"></fa-icon> </span>
+          <p>Hi there 👋<br>How can I help you today?</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-icons-rounded"><fa-icon class="fa-xs" [icon]="faPaperPlane"></fa-icon></span>
+      </div>
+    </div>
+
+  </body>

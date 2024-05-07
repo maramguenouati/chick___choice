@@ -1,0 +1,29 @@
+.app-meteo{
+    width:100vw ;
+    height: 100vh;
+    background-color: #d6d7da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.meteo {
+    background-color:#ffffff;
+    height: 90vh;
+    width: 75vw;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+}
+.left-meteo{
+flex: 3;
+background-color: #181818;
+border-top-left-radius: 40px;
+border-bottom-left-radius: 40px;
+}
+.right-meteo{
+    background-color: #F4F3F6;
+border-top-right-radius: 40px;
+border-bottom-right-radius: 40px;
+flex: 7;
+}
